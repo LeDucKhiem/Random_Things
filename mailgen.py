@@ -11,9 +11,9 @@ def add_domain_to_usernames(input_file, output_file, domain):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Add domain to usernames in a file")
-    parser.add_argument("-i","input_file", help="Path to input file containing usernames")
-    parser.add_argument("-o","output_file", help="Path to output file for modified usernames")
-    parser.add_argument("-d","domain", help="Domain name to append (e.g., example.com)")
+    parser.add_argument("-i", "--input-file", required=True, help="Path to input file containing usernames")
+    parser.add_argument("-o", "--output-file", required=True, help="Path to output file for modified usernames")
+    parser.add_argument("-d", "--domain", required=True, help="Domain name to append (e.g., example.com)")
 
     args = parser.parse_args()
 
